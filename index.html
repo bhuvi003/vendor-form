@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6a0dad;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 40px auto; 
+            background-color: white;
+            padding: 40px; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .header p {
+            font-size: 16px;
+            color: #666;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group .address-line {
+            margin-bottom: 10px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #5a0da5;
+        }
+        .form-group .checkbox-group {
+            display: flex;
+            flex-direction: column; 
+            gap: 5px;
+        }
+        .form-group .checkbox-group label {
+            display: flex;
+            align-items: center;
+        }
+        .form-group .checkbox-group input {
+            margin-right: -360px;
+        }
+        .form-group .photo-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6a0dad;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group .photo-button:hover {
+            background-color: #5a0da5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="C:\Users\BHUVANESWAR REDDY\Downloads\imageof the vendor.png" alt="Craft My Plate">
+        <h1>Vendor Registration Form</h1>
+        <p>Craft My Plate is India’s first food catering app, based in Hyderabad. The app allows users to order personalized catering for events like weddings, birthdays, corporate events, and more</p>
+    </div>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="restaurant-name">Restaurant Name: <span style="color: red;">*</span></label>
+            <input type="text" id="restaurant-name" name="restaurant_name" required>
+        </div>
+        <div class="form-group">
+            <label for="restaurant-address">Restaurant Address <span style="color: red;">*</span></label>
+            <div class="address-line">
+                <input type="text" id="restaurant-address" name="restaurant_address" required placeholder="Street Address">
+            </div>
+            <div class="address-line">
+                <input type="text" name="address_line2" placeholder="Street Address Line 2">
+            </div>
+            <div class="address-line">
+                <input type="text" name="city" placeholder="City">
+            </div>
+            <div class="address-line">
+                <input type="text" name="state" placeholder="State / Province">
+            </div>
+            <div class="address-line">
+                <input type="text" name="postal_code" placeholder="Postal / Zip Code">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone-number">Phone Number <span style="color: red;">*</span></label>
+            <input type="tel" id="phone-number" name="phone_number" required>
+        </div>
+        <div class="form-group">
+            <label for="restaurant-phone-number">Restaurant Phone Number</label>
+            <input type="tel" id="restaurant-phone-number" name="restaurant_phone_number">
+        </div>
+        <div class="form-group">
+            <label for="restaurant-email">Restaurant E-mail <span style="color: red;">*</span></label>
+            <input type="email" id="restaurant-email" name="restaurant_email" required>
+        </div>
+        <div class="form-group">
+            <label for="kitchen-type">Kitchen Type: <span style="color: red;">*</span></label>
+            <select id="kitchen-type" name="kitchen_type" required>
+                <option value="normal">Normal</option>
+                <option value="express">Express</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="commission-percentage">Percentage: <span style="color: red;">*</span></label>
+            <input type="number" id="commission-percentage" name="commission_percentage" required>
+        </div>
+        <div class="form-group">
+            <label for="staff-count">Number Of Staff in Restaurant (chefs, cleaning staff): <span style="color: red;">*</span></label>
+            <input type="number" id="staff-count" name="staff_count" required>
+        </div>
+        <div class="form-group">
+            <label>Type of platter service you want to offer: <span style="color: red;">*</span></label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="service_type" value="meal_boxes"> Meal boxes (Min 10 Onwards)</label>
+                <label><input type="checkbox" name="service_type" value="delivery_boxes"> Delivery boxes (Min 10-Max 120)</label>
+                <label><input type="checkbox" name="service_type" value="catering_services"> Catering services (Min 120 Onwards)</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Type of Restaurant: <span style="color: red;">*</span></label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="restaurant_type" value="dine_in_delivery"> Dine-In & Delivery</label>
+                <label><input type="checkbox" name="restaurant_type" value="dine_in_only"> Dine-In only</label>
+                <label><input type="checkbox" name="restaurant_type" value="delivery_only"> Delivery only / Cloud kitchen</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cuisine-offerings">Type of cuisine offerings: <span style="color: red;">*</span></label>
+            <input type="text" id="cuisine-offerings" name="cuisine_offerings" required>
+        </div>
+        <div class="form-group">
+            <label for="operations-timings">Operations timings & days of availability: <span style="color: red;">*</span></label>
+            <input type="text" id="operations-timings" name="operations_timings" required>
+        </div>
+        <div class="form-group">
+            <label for="menu-image">Menu Image <span style="color: red;">*</span></label>
+            <label class="photo-button" for="menu-image">Upload Photo</label>
+            <input type="file" id="menu-image" name="menu_image" accept="image/*" capture="environment" style="display:none;">
+        </div>
+        <div class="form-group">
+            <label for="restaurant-image">Restaurant Image <span style="color: red;">*</span></label>
+            <label class="photo-button" for="restaurant-image">Upload Photo</label>
+            <input type="file" id="restaurant-image" name="restaurant_image" accept="image/*" capture="environment" style="display:none;">
+        </div>
+        <div class="form-group">
+            <label for="restaurant-image">Food Sample Image <span style="color: red;">*</span></label>
+            <label class="photo-button" for="restaurant-image">Upload Photo</label>
+            <input type="file" id="restaurant-image" name="restaurant_image" accept="image/*" capture="environment" style="display:none;">
+        </div>
+        <div class="form-group">
+            <label for="restaurant-image">Kitchen Image (Hygiene) <span style="color: red;">*</span></label>
+            <label class="photo-button" for="restaurant-image">Upload Photo</label>
+            <input type="file" id="restaurant-image" name="restaurant_image" accept="image/*" capture="environment" style="display:none;">
+        </div>
+        <div class="form-group">
+            <label for="fssai-acknowledgement">FSSAI Acknowledgement: <span style="color: red;">*</span></label>
+            <input type="file" id="fssai-acknowledgement" name="fssai_acknowledgement" accept=".pdf, .jpg, .png" required>
+        </div>
+        <div class="form-group">
+            <label for="pan-card">Pan Card: <span style="color: red;">*</span></label>
+            <input type="file" id="pan-card" name="pan_card" accept=".pdf, .jpg, .png" required>
+        </div>
+        <div class="form-group">
+            <label for="gst-certification">GST Certification: <span style="color: red;">*</span></label>
+            <input type="file" id="gst-certification" name="gst_certification" accept=".pdf, .jpg, .png" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Thank You">
+        </div>
+    </form>
+</div>
+</body>
+</html>
